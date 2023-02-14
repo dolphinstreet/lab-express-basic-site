@@ -1,4 +1,4 @@
-:root{
+ :root{
   --white:rgb(246, 233, 233);
   --red:rgb(219, 83, 83);
   --darkred:rgb(172, 57, 57);
@@ -46,6 +46,7 @@ h1{
 }
   
 nav {
+  z-index:100;
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -253,3 +254,76 @@ address{
   justify-content: center;
 }
 
+#quote{
+  background-color: var(--blue);
+  padding: 6rem 4rem;
+}
+
+q{
+  color: var(--white);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 10rem;
+
+  
+}
+
+.card{
+  width: 20vw;
+  height: 40vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(34, 31, 31, 0.109);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale();
+}
+
+.racing{
+  background: url(/img/papa-dritto.jpeg);
+  background-position: 50%,50%;
+  background-size: cover;
+}
+.campionato{
+  background: url(/img/premiazione.jpeg);
+  background-position: 50%,50%;
+  background-size: cover;
+}
+.team{
+  background: url(/img/trio.jpeg);
+  background-position: 50%,50%;
+  background-size: cover;
+ }
+
+#card-title{
+  display: none;
+}
+
+.card:hover{
+  filter: none;
+}
+
+.card:hover #card-title{
+  display: block;
+  font-size: 2rem;
+  color: var(--white);
+
+}
+
+/**************************************************/
+
+ [data-component="slideshow"] .slide {
+  display: none;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+} 
