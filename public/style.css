@@ -320,10 +320,28 @@ q{
 
 /**************************************************/
 
- [data-component="slideshow"] .slide {
-  display: none;
+/* Slideshow container */
+.slideshow-container {
+  height: 80vh;
+  width: 80vw;
+  position: relative;
+  margin: auto;
+  margin-top:3rem;
+  margin-bottom:8rem;
+
 }
 
-[data-component="slideshow"] .slide.active {
-  display: block;
-} 
+.slides img {
+  width: 100%;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
